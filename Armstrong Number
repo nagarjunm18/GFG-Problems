@@ -11,3 +11,26 @@ class Solution {
         return sum==x;
     }
 }
+-----------------------------
+If digits are not specifically 3
+
+class Solution {
+    static boolean armstrongNumber(int n) {
+        // code here
+        int sum=0;
+        int original=n;
+        int temp=n;
+        int digits=0;
+        while(temp!=0){
+            digits++;
+            n/=10;
+        }
+        while(n!=0){
+            int digit=n%10;
+            n=n/10;
+            sum+=(int)Math.pow(digit,digits);
+        }
+        return sum==original;
+     
+    }
+}
