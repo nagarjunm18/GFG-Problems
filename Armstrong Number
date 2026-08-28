@@ -1,0 +1,13 @@
+class Solution {
+    static boolean armstrongNumber(int n) {
+        // code here
+        int sum=0;
+        int x=n;
+        while(n!=0){
+            int digit=n%10;
+            n/=10;
+            sum+=digit*digit*digit;
+        }
+        return sum==x;
+    }
+}
