@@ -1,0 +1,6 @@
+class Solution {
+    public int mthHalf(int n, int m) {
+        // code here
+        return n >> (m-1);
+    }
+}
