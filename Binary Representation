@@ -1,0 +1,13 @@
+class Solution {
+    public String getBinaryRep(int n) {
+        // code here
+        StringBuilder sb = new StringBuilder();
+        
+        for(int i=31;i>=0;i--){
+            int bit=(n >> i) & 1;
+            sb.append(bit);
+        }
+        
+        return sb.toString();
+    }
+}
