@@ -1,0 +1,21 @@
+class Solution {
+	public int findPosition(int n) {
+		// code here
+		int pos = 0;
+		int count = 0;
+		int x = n;
+		while (x != 0) {
+			x = x&(x - 1);
+			count++;
+		}
+		if (count>1 || n==0)
+			return - 1;
+		while (n != 0) {
+			if (((n>> pos)&1) == 1) {
+				return pos + 1;
+			}
+			pos++;
+		}
+		return 0;
+	}
+}
