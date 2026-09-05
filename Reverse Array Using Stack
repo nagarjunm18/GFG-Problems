@@ -1,0 +1,16 @@
+class Solution {
+	public void reverseArray(int[] arr) {
+		// code here
+		
+		Deque<Integer>stack = new ArrayDeque<>();
+		for (int num:arr) {
+			stack.push(num);
+		}
+		int i = 0;
+		while (!stack.isEmpty()) {
+			arr[i] = stack.pop();
+			i++;
+		}
+		
+	}
+}
