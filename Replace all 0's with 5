@@ -1,0 +1,17 @@
+class Solution {
+    public int convertFive(int n) {
+        // code here
+        int x=n;
+        int mul=1;
+        if(n==0) return 5;
+        while(x>0){
+            int digit=x%10;
+            if(digit==0){
+                n = n + 5 * mul;
+            }
+            x/=10;
+            mul*=10;
+        }
+        return n;
+    }
+}
